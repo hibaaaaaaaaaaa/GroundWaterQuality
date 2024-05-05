@@ -20,15 +20,15 @@ Groundwater is a natural resource for drinking water and requires regular assess
 
 
 2. Weighted Geometric Mean Water Quality Index (WGWQI) is calculated using the following equation:
- &emsp; **WGWQI** = ∏(𝑖=1 to 𝑛) (𝑄𝑖^𝑊𝑖) 
-\
+
+&emsp; **WGWQI** = ∏(𝑖=1 to 𝑛) (𝑄𝑖^𝑊𝑖) \
 &emsp; Where :
 - 𝑄𝑖 is the value of quality parameter i.
 - 𝑊𝑖 is the weight assigned to parameter i, calculated as 𝑊𝑖 = 𝑤𝑖 / ∑𝑤𝑖 ,  𝑤𝑖 is provided in the Excel file `Paramètres1.xlsx`.
 
 3. Oregon Water Quality Index (OWQI) s calculated using the following equation:
-&emsp; **OWQI** = √(𝑛 / (∑(𝑖=1 to 𝑛) 𝑆𝐼_𝑖^2))
-\
+
+&emsp; **OWQI** = √(𝑛 / (∑(𝑖=1 to 𝑛) 𝑆𝐼_𝑖^2))\
 &emsp; Where :
 - 𝑛 is the total number of parameters, and 𝑆𝐼_𝑖 is the Subindex for parameter 𝑖 , provided in the Excel file.
 
@@ -63,6 +63,9 @@ The quality rating for each parameter is then used in the calculation of **IQEs*
 |WAWQI > 300| Unsuitable for drinking |
 
 2. **WGWQI Interpretation :**
+
+
+
 | WGWQI Range             | Water Quality Level                                                               |
 | ----------------- | ------------------------------------------------------------------ |
 | 90 ≤ WGWQI ≤ 100 |Excellent     |
@@ -72,13 +75,16 @@ The quality rating for each parameter is then used in the calculation of **IQEs*
 |0 ≤ WGWQI ≤ 24| Very Bad |
 
 3. **OWQI Interpretation :**
+
+
+   
 | OWQI Range             | Water Quality Level                                                               |
 | ----------------- | ------------------------------------------------------------------ |
 | 90 ≤ OWQI ≤ 100 |Excellent     |
 | 85 ≤ OWQI ≤ 89 | Good   |
 | 80 ≤ OWQI ≤ 84  |  Fair   |
-| 60 ≤ WGWQI ≤ 79 | Poor |
-|0 ≤ WGWQI ≤ 59| Very Poor |
+| 60 ≤ OWQI ≤ 79 | Poor |
+|0 ≤ OWQI ≤ 59| Very Poor |
 
 ## Code Implementation
 The code implementation for calculating **WAWQI**, **WGWQI**, and **OWQI** from scratch and analyzing water quality data is provided in the `code.ipynb` file. The code includes the equations mentioned above along with functions to interpret the results and a pandas DataFrame for comprehensive analysis.
